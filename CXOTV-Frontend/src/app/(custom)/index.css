@@ -1,0 +1,134 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  overflow-x: hidden !important;
+  font-family: var(--font-fira), sans-serif !important;
+  font-weight: 500 !important;
+  font-style: normal !important;
+  font-size: 15px !important;
+  line-height: 23px !important;
+  color: rgb(0, 0, 0) !important;
+}
+
+.first-letter-styles::first-letter {
+    font-size: 50px;
+    font-weight: bold;
+    color: red;
+    margin-right: 3px;
+    float: left;
+
+}
+
+.sansfont-tech{
+    font-style: sans-serif ;
+    font-family: sans-serif;
+    
+}
+
+/* app/globals.css */
+@font-face {
+    font-family: 'swiper-icons';
+    src: url("data:application/font-woff;charset=utf-8;base64,...") format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+
+
+.logo-img {
+    width: 100px;
+    /* or any desired width */
+    height: auto;
+    /* to maintain aspect ratio */
+}
+
+
+/* page spinner */
+.spinner {
+    position: relative;
+    width: 56px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.spinner::before,
+.spinner::after {
+    border: 6.7px solid #474bff;
+    border-radius: 50%;
+    position: absolute;
+    content: '';
+    display: block;
+}
+
+.spinner::before {
+    width: 33.6px;
+    height: 33.6px;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+    animation: spinner-1o3y8q 0.75s infinite linear reverse;
+}
+
+.spinner::after {
+    animation: spinner-1o3y8q 0.5s infinite linear;
+    height: 56px;
+    width: 56px;
+    border-right-color: transparent;
+    border-top-color: transparent;
+}
+
+@keyframes spinner-1o3y8q {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* component small spinner */
+
+.spinner2 {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    padding: 6.7px;
+    background: conic-gradient(from 135deg at top, #474bff 90deg, #0000 0) 0 calc(50% - 4.5px)/19px 9.5px,
+        radial-gradient(farthest-side at bottom left, #0000 calc(100% - 6.7px), #474bff calc(100% - 5.6px) 99%, #0000) top right/50% 50% content-box content-box,
+        radial-gradient(farthest-side at top, #0000 calc(100% - 6.7px), #474bff calc(100% - 5.6px) 99%, #0000) bottom /100% 50% content-box content-box;
+    background-repeat: no-repeat;
+    animation: spinner-v8og74 1s infinite linear;
+}
+
+@keyframes spinner-v8og74 {
+    100% {
+        transform: rotate(1turn);
+    }
+}
+
+
+
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+
+    /* Center slide text vertically */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}

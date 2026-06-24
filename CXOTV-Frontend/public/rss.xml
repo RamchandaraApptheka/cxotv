@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<rss version="2.0">
+  <channel>
+    <title>CXO TV</title>
+    <link>https://cxotv.techplusmedia.com</link>
+    <description>Latest CXO interviews, news, and enterprise technology insights</description>
+    <language>en</language>
+
+    <item>
+      <title>Sample Latest Article</title>
+      <link>https://cxotv.techplusmedia.com/news/sample-article</link>
+      <pubDate>Mon, 10 Feb 2025 10:00:00 +0530</pubDate>
+      <description>This is a sample RSS item. Replace with dynamic content.</description>
+    </item>
+
+  </channel>
+</rss>

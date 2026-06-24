@@ -1,0 +1,21 @@
+services:
+  db:
+    image: postgres:15-alpine
+    container_name: cxotv-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: devcxotvdbusr
+      POSTGRES_PASSWORD: "Bjt*bh7%tiKr&4^te45"
+      POSTGRES_DB: devcxotvdb
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U devcxotvdbusr -d devcxotvdb"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+volumes:
+  postgres_data:
